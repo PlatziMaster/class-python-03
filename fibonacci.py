@@ -37,11 +37,12 @@ def fibo_gen(max=None):
         if counter <= 1:
             counter += 1
             yield n1
-        aux = n1 + n2
-        n1 = n2
-        n2 = aux
-        counter += 1
-        yield aux
+        else:
+            aux = n1 + n2
+            n1 = n2
+            n2 = aux
+            counter += 1
+            yield aux
 
 
 if __name__ == '__main__':
